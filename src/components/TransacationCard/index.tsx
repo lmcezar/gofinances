@@ -16,6 +16,7 @@ interface Category {
   icon: string;
 }
 interface Data {
+  type: 'positive' | 'negative';
   title: string;
   amount: string;
   category: Category;
@@ -32,13 +33,14 @@ export function TransactionCard({ data }: Props) {
         {data.title}
       </Title>
 
-      <Amount>
-        {data.amount}
+      <Amount type={data.type}>
+        { data.type === 'negative' && '- ' }
+        { data.amount }
       </Amount>
       
       <Footer>
         <Category>
-          <Icon name="dollar-sign" />
+          <Icon name={data.category.icon} />
           <CategoryName>
             {data.category.name}
           </CategoryName>
