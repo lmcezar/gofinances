@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components';
@@ -9,6 +11,7 @@ import {
 } from '@expo-google-fonts/poppins';
 
 import { Register } from './src/screens/Register';
+import { Dashboard } from './src/screens/Dashboard';
 import theme from './src/global/styles/theme';
 
 
@@ -26,7 +29,7 @@ export default function App(): JSX.Element {
 
   return (
     <ThemeProvider theme={theme}>
-      <Register />
+      <Dashboard />
     </ThemeProvider>
   );
 }
