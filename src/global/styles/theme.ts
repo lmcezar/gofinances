@@ -19,7 +19,7 @@ export default {
   },
 
   fonts: {
-    regular: 'Poppins_900Black_Italic',
+    regular: 'Poppins_400Regular',
     medium: 'Poppins_500Medium',
     bold: 'Poppins_700Bold'
   }

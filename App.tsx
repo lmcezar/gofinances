@@ -10,7 +10,8 @@ import {
   useFonts,
   Poppins_400Regular,
   Poppins_500Medium,
-  Poppins_700Bold
+  Poppins_700Bold,
+  Poppins_900Black
 } from '@expo-google-fonts/poppins';
 
 import { AppRoutes } from './src/routes/app.routes';
@@ -22,7 +23,8 @@ export default function App(): JSX.Element {
   const [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
-    Poppins_700Bold
+    Poppins_700Bold,
+    Poppins_900Black,
   });
 
   if(!fontsLoaded){
