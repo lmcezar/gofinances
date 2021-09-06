@@ -63,8 +63,7 @@ export function Register() {
   const [transactionType, setTransactionType] = useState('');
   const [categoryModalOpen, setCategoryModalOpen] = useState(false);
 
-  const dataKey = '@gofinances:transactions';
-  
+    
   function handleTransactionTypeSelect(type: 'up' | 'down') {
     setTransactionType(type);
   }
@@ -78,7 +77,7 @@ export function Register() {
   }
 
   async function handleRegister(form: FormData) {
-    if(!transactionType)
+      if(!transactionType)
       return Alert.alert('Selecione o tipo da transação');
 
     if(category.key === 'category')
@@ -94,6 +93,7 @@ export function Register() {
     }
 
     try {
+      const dataKey = '@gofinances:transactions';
       const data = await AsyncStorage.getItem(dataKey);
       const currentData = data ? JSON.parse(data) : [];
 
